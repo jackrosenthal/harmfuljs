@@ -11,42 +11,38 @@
 /* Selections are sacred, not scriptable
  * (only to be created, modified, or used by the user themselves) */
 
-noselect = function () {
-    throw "Selections are sacred, and cannot be manipulated or accessed by anyone but the user."
-}
-
-unsafeWindow.getSelection = noselect;
-unsafeWindow.document.getSelection = noselect;
-unsafeWindow.document.createRange = noselect;
-unsafeWindow.document.body.createTextRange = noselect;
-unsafeWindow.HTMLInputElement.prototype.select = noselect;
-unsafeWindow.HTMLInputElement.prototype.setSelectionRange = noselect;
-unsafeWindow.HTMLInputElement.prototype.setRangeText = noselect;
-unsafeWindow.HTMLTextAreaElement.prototype.select = noselect;
-unsafeWindow.HTMLTextAreaElement.prototype.setSelectionRange = noselect;
-unsafeWindow.HTMLTextAreaElement.prototype.setRangeText = noselect;
-unsafeWindow.Range.prototype.setStart = noselect;
-unsafeWindow.Range.prototype.setStartBefore = noselect;
-unsafeWindow.Range.prototype.setStartAfter = noselect;
-unsafeWindow.Range.prototype.setEnd = noselect;
-unsafeWindow.Range.prototype.setEndBefore = noselect;
-unsafeWindow.Range.prototype.setEndAfter = noselect;
-unsafeWindow.Range.prototype.select = noselect;
-unsafeWindow.Range.prototype.selectNode = noselect;
-unsafeWindow.Range.prototype.selectNodeContents = noselect;
-unsafeWindow.Selection.prototype.removeAllRanges = noselect;
-unsafeWindow.Selection.prototype.addRange = noselect;
-unsafeWindow.Selection.prototype.removeRange = noselect;
-unsafeWindow.Selection.prototype.empty = noselect;
-unsafeWindow.Selection.prototype.collapse = noselect;
-unsafeWindow.Selection.prototype.setPosition = noselect;
-unsafeWindow.Selection.prototype.collapseToStart = noselect;
-unsafeWindow.Selection.prototype.collapseToEnd = noselect;
-unsafeWindow.Selection.prototype.extend = noselect;
-unsafeWindow.Selection.prototype.setBaseAndExtent = noselect;
-unsafeWindow.Selection.prototype.containsNode = noselect;
-unsafeWindow.Selection.prototype.selectAllChildren = noselect;
-unsafeWindow.Selection.prototype.modify = noselect;
+unsafeWindow.getSelection = undefined;
+unsafeWindow.document.getSelection = undefined;
+unsafeWindow.document.createRange = undefined;
+unsafeWindow.document.body.createTextRange = undefined;
+unsafeWindow.HTMLInputElement.prototype.select = undefined;
+unsafeWindow.HTMLInputElement.prototype.setSelectionRange = undefined;
+unsafeWindow.HTMLInputElement.prototype.setRangeText = undefined;
+unsafeWindow.HTMLTextAreaElement.prototype.select = undefined;
+unsafeWindow.HTMLTextAreaElement.prototype.setSelectionRange = undefined;
+unsafeWindow.HTMLTextAreaElement.prototype.setRangeText = undefined;
+unsafeWindow.Range.prototype.setStart = undefined;
+unsafeWindow.Range.prototype.setStartBefore = undefined;
+unsafeWindow.Range.prototype.setStartAfter = undefined;
+unsafeWindow.Range.prototype.setEnd = undefined;
+unsafeWindow.Range.prototype.setEndBefore = undefined;
+unsafeWindow.Range.prototype.setEndAfter = undefined;
+unsafeWindow.Range.prototype.select = undefined;
+unsafeWindow.Range.prototype.selectNode = undefined;
+unsafeWindow.Range.prototype.selectNodeContents = undefined;
+unsafeWindow.Selection.prototype.removeAllRanges = undefined;
+unsafeWindow.Selection.prototype.addRange = undefined;
+unsafeWindow.Selection.prototype.removeRange = undefined;
+unsafeWindow.Selection.prototype.empty = undefined;
+unsafeWindow.Selection.prototype.collapse = undefined;
+unsafeWindow.Selection.prototype.setPosition = undefined;
+unsafeWindow.Selection.prototype.collapseToStart = undefined;
+unsafeWindow.Selection.prototype.collapseToEnd = undefined;
+unsafeWindow.Selection.prototype.extend = undefined;
+unsafeWindow.Selection.prototype.setBaseAndExtent = undefined;
+unsafeWindow.Selection.prototype.containsNode = undefined;
+unsafeWindow.Selection.prototype.selectAllChildren = undefined;
+unsafeWindow.Selection.prototype.modify = undefined;
 
 /* The clipboard is sacred, and only for the user to modify */
 origQCS = unsafeWindow.document.queryCommandSupported;
